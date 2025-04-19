@@ -1,4 +1,10 @@
+/* Base Styles */
 :root {
+  --primary-bg: #000000;
+  --secondary-bg: #121212;
+  --text-primary: #FFFFFF;
+  --text-secondary: #AAAAAA;
+  --accent: rgba(255, 255, 255, 0.1);
   --space-black: #000000;
   --space-dark: #121212;
   --space-blue: #005288;
@@ -16,10 +22,165 @@
 
 body {
   font-family: 'Roboto Mono', monospace;
-  background-color: var(--space-black);
-  color: var(--space-white);
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, .nav-links a, .btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Layout */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--secondary-bg);
+  padding: 1.5rem 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-secondary);
+}
+
+/* Main Content */
+main {
+  margin-top: 80px;
+  padding: 2rem 5%;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--secondary-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--text-primary);
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-bg);
+  padding: 1.5rem 5%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  main {
+    margin-top: 60px;
+  }
 }
 
 /* Star background with improved star density */
@@ -47,16 +208,6 @@ body::after {
   z-index: -1;
 }
 
-/* Header with SpaceX-like styling */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 5%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-}
-
 /* Add a subtle line under the header */
 header::after {
   content: '';
@@ -66,75 +217,6 @@ header::after {
   width: 100%;
   height: 1px;
   background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 2rem;
-}
-
-nav ul li a {
-  color: var(--space-white);
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 0.3s;
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-/* Underline effect for nav links */
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: width 0.3s;
-}
-
-nav ul li a:hover {
-  color: var(--space-white);
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-/* Hero section with SpaceX-like typography */
-.hero {
-  text-align: center;
-  padding: 8rem 1rem 4rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.hero p {
-  color: var(--space-gray);
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  letter-spacing: 1px;
 }
 
 /* Chat interface with improved styling */
@@ -301,17 +383,6 @@ nav ul li a:hover::after {
 
 #send-button:hover {
   background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* Footer with improved styling */
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: var(--space-gray);
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 2rem;
 }
 
 /* Typing indicator */
