@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Badpikaverse - Learn more about our digital command center">
+  <meta name="theme-color" content="#000000">
+  <title>BADPIKAVERSE | About</title>
+  <style>
+    /* Material Icons font face */
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: url('icons/MaterialIcons-Regular.woff2') format('woff2'),
+           url('icons/MaterialIcons-Regular.woff') format('woff'),
+           url('icons/MaterialIcons-Regular.ttf') format('truetype');
+    }
+
+    :root {
+      --space-black: #000000;
+      --space-dark: #121212;
+      --space-blue: #005288;
+      --space-blue-light: rgba(0, 82, 136, 0.8);
+      --space-white: #ffffff;
+      --space-gray: #aaaaaa;
+      --space-red: #cc0000;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto Mono', monospace;
+      background-color: var(--space-black);
+      color: var(--space-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIHg9IjEwIiB5PSIxMCIgLz4KICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIiB4PSI0MCIgeT0iMzAiIC8+CiAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIgeD0iNzAiIHk9IjUwIiAvPgogIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIHg9IjkwIiB5PSIxMCIgLz4KICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIiB4PSIxMjAiIHk9IjMwIiAvPgogIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIHg9IjE1MCIgeT0iNzAiIC8+CiAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIgeD0iMTcwIiB5PSI5MCIgLz4KICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIiB4PSIyMTAiIHk9IjEwIiAvPgogIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIHg9IjE5MCIgeT0iNTAiIC8+CiAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIgeD0iMjMwIiB5PSI0MCIgLz4KPC9zdmc+') repeat;
+      opacity: 0.5;
+      z-index: -1;
+    }
+    
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 82, 136, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+    
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--space-white), transparent);
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin-left: 2rem;
+    }
+    
+    nav ul li a {
+      color: var(--space-white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--space-white);
+      transition: width 0.3s;
+    }
+    
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .about-container {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .about-section {
+      margin-bottom: 4rem;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .about-section:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .about-section:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .about-title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--space-blue);
+    }
+
+    .about-content {
+      font-size: 1.1rem;
+      color: var(--space-gray);
+      margin-bottom: 2rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .feature-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--space-blue);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--space-gray);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 5%;
+      }
+      
+      nav ul {
+        margin-top: 1rem;
+      }
+      
+      nav ul li {
+        margin: 0 0.5rem;
+      }
+      
+      .about-title {
+        font-size: 2rem;
+      }
+      
+      .about-container {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header>
+    <div class="logo">BADPIKAVERSE</div>
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/terminal">TERMINAL</a></li>
+        <li><a href="/about" class="active">ABOUT</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-container">
+    <section class="about-section">
+      <h1 class="about-title">ABOUT BADPIKAVERSE</h1>
+      <p class="about-content">
+        Welcome to Badpikaverse, a digital command center designed to explore the frontiers of space and technology. 
+        Our mission is to create an immersive experience that combines the aesthetics of space exploration with 
+        modern web technologies.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2 class="about-title">OUR VISION</h2>
+      <p class="about-content">
+        We envision a future where space exploration is accessible to everyone. Through our platform, 
+        we aim to inspire the next generation of space enthusiasts and developers by providing a unique 
+        interface that combines functionality with the beauty of the cosmos.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2 class="about-title">FEATURES</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3 class="feature-title">TERMINAL INTERFACE</h3>
+          <p>Experience a modern take on the classic terminal interface, designed for space exploration.</p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-title">REAL-TIME DATA</h3>
+          <p>Access real-time space data and information through our intuitive interface.</p>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-title">IMMERSIVE DESIGN</h3>
+          <p>Enjoy a visually stunning experience with our space-themed design elements.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Designed by Juan Felipe Malpica and Diego Malpica
+  </footer>
+</body>
+</html> 

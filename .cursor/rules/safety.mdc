@@ -1,0 +1,55 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Safety Rules
+
+## File Protection Rules
+1. **Never Delete Project Files**
+   - Do not use commands that can delete or overwrite project files
+   - This includes but is not limited to:
+     - `git reset --hard`
+     - `rm -rf`
+     - `del /s /q`
+     - Any command that could result in data loss
+
+2. **Safe Git Operations**
+   - Always create backups before major git operations
+   - Use `git stash` instead of reset when possible
+   - Prefer `git checkout` over `git reset` for moving between commits
+   - Never force push (`git push -f`) without explicit approval
+
+3. **File System Operations**
+   - Always verify the current working directory before operations
+   - Use relative paths instead of absolute paths
+   - Double-check file paths before any operation
+   - Create backups before making significant changes
+
+4. **Error Prevention**
+   - If a command might affect multiple files, always ask for confirmation
+   - Provide clear explanations of what changes will be made
+   - List affected files before executing destructive operations
+   - Stop and ask for help if unsure about any operation
+
+5. **Recovery Procedures**
+   - Keep track of important commit hashes
+   - Document backup locations
+   - Know how to restore from backups
+   - Have a rollback plan before making changes
+
+## Emergency Procedures
+If files are accidentally deleted:
+1. Stop all operations immediately
+2. Check git reflog for recent commits
+3. Look for local backups
+4. Contact the project owner
+5. Do not attempt recovery without explicit instructions
+
+## Best Practices
+- Always work in a clean working directory
+- Commit changes frequently
+- Create branches for experimental changes
+- Keep backups of important files
+- Document all major operations
+- Test changes in a safe environment first 

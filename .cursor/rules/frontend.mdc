@@ -1,0 +1,98 @@
+---
+description: style
+globs: 
+alwaysApply: false
+---
+# Style Guide for Remote Server Terminal Interface
+
+## Color Palette
+- **Primary Background**: Black (#000000) - Creates a dark, minimalist base
+- **Secondary Background**: Dark gray (#121212) - Used for containers and cards
+- **Text Colors**: 
+  - White (#FFFFFF) for primary text and headings
+  - Light gray (#AAAAAA) for secondary text and descriptions
+- **Accent Colors**: 
+  - White with transparency for interactive elements (buttons, hover states)
+  - No blue colors should be used anywhere in the interface
+
+## Typography
+- **Font Family**: Roboto Mono (monospace) exclusively throughout the interface
+- **Font Weights**: 
+  - 700 (Bold) for headings and buttons
+  - 400 (Regular) for body text and descriptions
+- **Text Transformations**:
+  - UPPERCASE for all navigation items, headings, and buttons
+  - Normal case for descriptive text and content
+- **Letter Spacing**:
+  - 2-3px for headings and titles
+  - 1px for navigation and buttons
+- **Font Sizes**:
+  - Large headings: 2.5rem (40px)
+  - Section headings: 1.2rem (19.2px)
+  - Navigation: 0.9rem (14.4px)
+  - Body text: 0.9-1.1rem (14.4-17.6px)
+  - Footer: 0.8rem (12.8px)
+
+## Layout & Spacing
+- **Container Width**: Maximum 800-1000px for content sections
+- **Padding**: 
+  - Header: 1.5rem 5%
+  - Sections: 1.5-2rem
+  - Cards: 1.5rem
+- **Margins**:
+  - Between sections: 4-5rem
+  - Between elements: 1-2rem
+- **Border Radius**: 8px for containers and cards
+- **Line Height**: 1.6 for body text
+
+## Background Elements
+- **Star Background**: Subtle white dots on black background with 50% opacity
+- **Gradient Overlay**: Very subtle radial gradient from center (almost imperceptible)
+- **No Images**: The interface relies on typography and spacing rather than images
+
+## UI Elements
+- **Containers**: 
+  - Dark gray backgrounds (rgba(18, 18, 18, 0.7))
+  - Thin white borders (rgba(255, 255, 255, 0.1))
+  - Subtle box shadows for depth
+- **Buttons**:
+  - Transparent white background (rgba(255, 255, 255, 0.1))
+  - White text
+  - No icons
+  - Uppercase text
+  - Hover effect: slightly lighter background
+- **Input Fields**:
+  - Dark background (rgba(0, 0, 0, 0.3))
+  - White text
+  - No borders
+  - Focus state: slightly darker background
+- **Chat Messages**:
+  - User messages: Light transparent background (rgba(255, 255, 255, 0.1))
+  - System messages: Dark background with white left border
+  - Maximum width: 80% of container
+  - Rounded corners with one flat corner
+
+## Animation & Effects
+- **Transitions**: Smooth 0.3s transitions for hover and focus states
+- **Hover Effects**: 
+  - Navigation: White underline animation
+  - Buttons: Slightly lighter background
+  - Feature cards: Subtle upward movement and shadow
+- **Loading Animation**: White dots with pulsing animation
+
+## Responsive Behavior
+- **Breakpoint**: 768px for mobile adaptation
+- **Mobile Adjustments**:
+  - Stacked header elements
+  - Reduced font sizes
+  - Full-width feature cards
+  - Reduced vertical spacing
+
+## Important Style Rules
+1. **No Icons**: Do not use any Material Icons or other icon fonts
+2. **No Blue Colors**: Avoid all blue colors, including in gradients and accents
+3. **Consistent Typography**: Use only Roboto Mono throughout the interface
+4. **Uppercase for Navigation and Headings**: Maintain uppercase styling for these elements
+5. **Minimalist Aesthetic**: Keep the interface clean and uncluttered
+6. **White and Gray Only**: Stick to white and gray color variations for all elements
+

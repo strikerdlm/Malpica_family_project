@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Contact Badpikaverse - Get in touch with us">
+  <title>BADPIKAVERSE | Contact</title>
+  <style>
+    :root {
+      --space-black: #000000;
+      --space-dark: #121212;
+      --space-white: #ffffff;
+      --space-gray: #aaaaaa;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto Mono', monospace;
+      background-color: var(--space-black);
+      color: var(--space-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIHg9IjEwIiB5PSIxMCIgLz4KICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIiB4PSI0MCIgeT0iMzAiIC8+CiAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIgeD0iNzAiIHk9IjUwIiAvPgogIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIHg9IjkwIiB5PSIxMCIgLz4KICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIiB4PSIxMjAiIHk9IjMwIiAvPgogIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIHg9IjE1MCIgeT0iNzAiIC8+CiAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIgeD0iMTcwIiB5PSI5MCIgLz4KICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIiB4PSIyMTAiIHk9IjEwIiAvPgogIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIHg9IjE5MCIgeT0iNTAiIC8+CiAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmZiIgeD0iMjMwIiB5PSI0MCIgLz4KPC9zdmc+') repeat;
+      opacity: 0.5;
+      z-index: -1;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin-left: 2rem;
+    }
+    
+    nav ul li a {
+      color: var(--space-white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--space-white);
+      transition: width 0.3s;
+    }
+    
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+    
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      flex: 1;
+    }
+    
+    .contact-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    
+    .contact-subtitle {
+      font-size: 1.1rem;
+      color: var(--space-gray);
+      margin-bottom: 3rem;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .contact-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+    
+    .contact-section-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .contact-link {
+      color: var(--space-white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .contact-link:hover {
+      color: var(--space-gray);
+    }
+    
+    .contact-text {
+      color: var(--space-gray);
+    }
+    
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .form-group label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      padding: 1rem;
+      color: var(--space-white);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1rem;
+      border-radius: 4px;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    
+    .submit-button {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--space-white);
+      border: none;
+      padding: 1rem 2rem;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: 4px;
+    }
+    
+    .submit-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .alert {
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+    
+    .alert-success {
+      background: rgba(0, 255, 0, 0.1);
+      color: #00ff00;
+    }
+    
+    .alert-error {
+      background: rgba(255, 0, 0, 0.1);
+      color: #ff0000;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--space-gray);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      letter-spacing: 1px;
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 5%;
+      }
+      
+      nav ul {
+        margin-top: 1rem;
+      }
+      
+      nav ul li {
+        margin: 0 0.5rem;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-container {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header>
+    <div class="logo">BADPIKAVERSE</div>
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/terminal">TERMINAL</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/contact" class="active">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <h1 class="contact-title">CONTACT US</h1>
+    <p class="contact-subtitle">Ready to explore the digital frontier? Get in touch with us.</p>
+    
+    <div id="alert" class="alert" style="display: none;"></div>
+    
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <h2 class="contact-section-title">EMAIL</h2>
+          <a href="mailto:dlmalpicah@unal.edu.co" class="contact-link">
+            dlmalpicah@unal.edu.co
+          </a>
+        </div>
+        
+        <div class="contact-card">
+          <h2 class="contact-section-title">GITHUB</h2>
+          <a href="https://github.com/strikerdlm/SpaceX-Terminal-Interface" class="contact-link" target="_blank" rel="noopener">
+            github.com/strikerdlm
+          </a>
+        </div>
+        
+        <div class="contact-card">
+          <h2 class="contact-section-title">LOCATION</h2>
+          <p class="contact-text">Bogotá, Colombia</p>
+        </div>
+      </div>
+      
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-button">SEND MESSAGE</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+      
+      try {
+        const response = await fetch('/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        const data = await response.json();
+        
+        const alertDiv = document.getElementById('alert');
+        alertDiv.style.display = 'block';
+        
+        if (response.ok) {
+          alertDiv.className = 'alert alert-success';
+          alertDiv.textContent = data.message;
+          this.reset();
+        } else {
+          alertDiv.className = 'alert alert-error';
+          alertDiv.textContent = data.error;
+        }
+        
+        setTimeout(() => {
+          alertDiv.style.display = 'none';
+        }, 5000);
+        
+      } catch (error) {
+        console.error('Error:', error);
+        const alertDiv = document.getElementById('alert');
+        alertDiv.style.display = 'block';
+        alertDiv.className = 'alert alert-error';
+        alertDiv.textContent = 'An error occurred. Please try again later.';
+      }
+    });
+  </script>
+
+  <footer>
+    © 2025 Designed by Juan Felipe Malpica and Diego Malpica
+  </footer>
+</body>
+</html> 

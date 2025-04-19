@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | MISSION CONTROL</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    
+    .error-code {
+      font-size: 8rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1;
+      color: var(--space-blue);
+    }
+    
+    .error-message {
+      font-size: 1.5rem;
+      margin: 1rem 0 2rem;
+    }
+    
+    .back-button {
+      display: inline-block;
+      background-color: var(--space-blue);
+      color: var(--space-white);
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .back-button:hover {
+      background-color: var(--space-blue-light);
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header>
+    <div class="logo">MISSION CONTROL</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="error-container">
+      <h1 class="error-code">404</h1>
+      <p class="error-message">MISSION OBJECT NOT FOUND</p>
+      <a href="index.html" class="back-button">RETURN TO BASE</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 MISSION CONTROL
+  </footer>
+</body>
+</html> 

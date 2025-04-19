@@ -1,0 +1,207 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Multi-Project Git Management Guide
+
+## Project Organization
+
+### Directory Structure
+```
+Projects/
+├── project1/
+│   ├── .git/
+│   └── src/
+├── project2/
+│   ├── .git/
+│   └── src/
+└── shared/
+    └── common-resources/
+```
+
+### Best Practices
+1. **Separate Repositories**
+   - Each project should have its own Git repository
+   - Keep repositories in separate directories
+   - Use descriptive directory names
+   - Maintain consistent structure across projects
+
+2. **Branch Management**
+   - Use consistent branch naming across projects
+   - Follow naming conventions:
+     - `main` or `master` for production code
+     - `develop` for development
+     - `feature/feature-name` for new features
+     - `bugfix/issue-name` for bug fixes
+     - `release/version` for releases
+
+3. **Remote Management**
+   - Use descriptive remote names
+   - Example remote setup:
+     ```bash
+     git remote add project1-origin https://github.com/user/project1.git
+     git remote add project2-origin https://github.com/user/project2.git
+     ```
+
+## Workflow Management
+
+### Switching Between Projects
+1. **Save Current Work**
+   ```bash
+   git stash save "WIP: Current project state"
+   ```
+
+2. **Switch Projects**
+   ```bash
+   cd ../other-project
+   ```
+
+3. **Restore Work**
+   ```bash
+   git stash pop
+   ```
+
+### Common Operations
+
+1. **Starting a New Project**
+   ```bash
+   mkdir new-project
+   cd new-project
+   git init
+   git remote add origin <repository-url>
+   ```
+
+2. **Cloning Multiple Projects**
+   ```bash
+   # Create projects directory
+   mkdir projects
+   cd projects
+   
+   # Clone each project
+   git clone <project1-url>
+   git clone <project2-url>
+   ```
+
+3. **Updating All Projects**
+   ```bash
+   # Create update script
+   for dir in */; do
+     cd "$dir"
+     git pull
+     cd ..
+   done
+   ```
+
+## Project Dependencies
+
+### Managing Shared Code
+1. **Git Submodules**
+   ```bash
+   # Add submodule
+   git submodule add <repository-url> shared-code
+   
+   # Update submodules
+   git submodule update --init --recursive
+   ```
+
+2. **Git Subtrees**
+   ```bash
+   # Add subtree
+   git subtree add --prefix=shared <repository-url> main
+   
+   # Update subtree
+   git subtree pull --prefix=shared <repository-url> main
+   ```
+
+## Configuration Management
+
+### Global Git Configuration
+```bash
+# Set up global gitignore
+git config --global core.excludesfile ~/.gitignore_global
+
+# Set up global user
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+### Project-Specific Configuration
+```bash
+# Set project-specific user
+git config user.name "Project Specific Name"
+git config user.email "project@example.com"
+```
+
+## Backup and Recovery
+
+### Regular Backups
+1. **Local Backups**
+   ```bash
+   # Create backup script
+   for dir in */; do
+     cd "$dir"
+     git bundle create ../backup-$(basename "$dir").bundle --all
+     cd ..
+   done
+   ```
+
+2. **Remote Backups**
+   - Use multiple remote repositories
+   - Push to backup remotes regularly
+   ```bash
+   git remote add backup <backup-repository-url>
+   git push backup main
+   ```
+
+### Recovery Procedures
+1. **Restore from Backup**
+   ```bash
+   # Clone from backup
+   git clone backup-<project>.bundle <project>
+   ```
+
+2. **Sync with Remote**
+   ```bash
+   git fetch --all
+   git reset --hard origin/main
+   ```
+
+## Security Considerations
+
+1. **Access Control**
+   - Use SSH keys for authentication
+   - Implement proper branch protection
+   - Use repository secrets for sensitive data
+
+2. **Sensitive Data**
+   - Never commit sensitive information
+   - Use .gitignore for private files
+   - Implement environment variables
+
+## Monitoring and Maintenance
+
+1. **Regular Checks**
+   - Check repository status
+   - Verify remote connections
+   - Update dependencies
+   - Clean up old branches
+
+2. **Automation**
+   - Set up CI/CD pipelines
+   - Implement automated testing
+   - Use hooks for consistency
+
+## Documentation
+
+1. **Project Documentation**
+   - Maintain README files
+   - Document dependencies
+   - Keep changelogs
+   - Document workflows
+
+2. **Team Guidelines**
+   - Establish contribution guidelines
+   - Document branching strategies
+   - Maintain style guides
+   - Keep process documentation 
