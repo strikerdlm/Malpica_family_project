@@ -41,4 +41,11 @@ yarn-error.log*
 
 # Build files
 /dist
-/build 
+/build
+
+# Backup directories - NEVER commit these
+/backups/
+backups/
+**/backups/
+**/_legacy_node_donotopen/
+**/repo_migration/ 
