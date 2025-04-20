@@ -23,10 +23,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <meta name="description" content="Projects - Explore AI, technology, and science projects">
     <title>BADPIKAVERSE | Projects</title>
   <?php endif; ?>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Early theme initialization -->
   <script>
-    // Initialize theme from localStorage before any content is rendered
     (function() {
       const currentTheme = localStorage.getItem('theme') || 'dark';
       if (currentTheme === 'light') {
@@ -34,12 +32,15 @@ $current_page = basename($_SERVER['PHP_SELF']);
       }
     })();
   </script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
   <div class="stars"></div>
 
   <header>
-    <div class="logo">BADPIKAVERSE</div>
+    <a href="index.php" class="logo">BADPIKAVERSE</a>
     <div class="header-controls">
       <nav>
         <ul>
