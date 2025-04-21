@@ -64,7 +64,7 @@ badpikaverse/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/strikerdlm/SpaceX-Terminal-Interface.git
+   git clone https://github.com/strikerdlm/malpica_family_project.git
    ```
 
 2. Set up a PHP server (7.4+ recommended)
