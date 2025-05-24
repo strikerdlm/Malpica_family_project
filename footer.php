@@ -1,5 +1,5 @@
   <footer>
-    © 2024 BADPIKAVERSE. All rights reserved.
+    © 2025 BADPIKAVERSE. All rights reserved.
   </footer>
 </body>
 </html> 

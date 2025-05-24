@@ -53,21 +53,30 @@
   </section>
 
   <section class="about-section">
-    <h2 class="about-title">TANIA MAHECHA: THE HEARTBEAT OF OUR FAMILY</h2>
+    <h2 class="about-title">DIEGO & JUAN FELIPE: A JOURNEY OF ENDLESS EXPLORATION</h2>
     <p class="about-content">
-      In every family's journey, there is someone who embodies the very essence of love, care, and unwavering support. For Diego Malpica and Juan Felipe Malpica, that person is undoubtedly Tania Mahecha, a devoted wife and nurturing mother whose presence illuminates their daily lives.
+      Under the vast sky, where constellations whispered secrets and the stars scattered stories like cosmic breadcrumbs, lived two adventurers named Diego Malpica and Juan Felipe Malpica, affectionately known as Pipe. Bound not just by blood, but by the infinite curiosity for life's mysteries, their journey was as endless as their dreams.
     </p>
     <p class="about-content">
-      Tania is more than just a cornerstone; she is the gentle, steady heartbeat that guides and comforts Diego and Juan Felipe. With her warmth, patience, and unconditional love, Tania creates an environment brimming with joy and emotional security. Her strength is their inspiration, her laughter their music, and her embrace their safest haven.
+      In the high mountains, reminiscent of Diego's cherished hikes through Colombia's El Cocuy, they wandered beneath cliffs crowned with eternal snow. They sought truths whispered by winds colder than midnight starlight, and there, Diego taught Pipe the language of the cosmos and the science of survival in extreme environments. They spoke of Shackleton's perseverance and Amundsen's courage, and Diego told stories about how the spirit of Leonardo da Vinci could guide their innovations.
     </p>
     <p class="about-content">
-      From the smallest daily gestures to life's significant milestones, Tania's love is tangible and ever-present. She encourages Diego in his professional endeavors, offering wisdom and grounding in moments of uncertainty. For Juan Felipe, Tania's nurturing spirit is a compass, inspiring his curiosity, confidence, and kindness. Her support helps him navigate the wonders of childhood with enthusiasm and courage.
+      Each night under their canopy of stars, Diego shared his vast knowledge—sometimes science, sometimes philosophy—illuminated softly by the orange glow of their campfire. Pipe listened intently, his mind a fertile ground for imagination. He dreamt vividly of Sonic-like speed, of transforming watches, and machines that could bend time itself. But Diego always reminded him that the greatest power was knowledge, woven intricately with creativity and courage.
     </p>
     <p class="about-content">
-      The love that Diego and Juan Felipe express for Tania is profound and heartfelt. Their appreciation and affection are evident in every shared glance, every thoughtful word, and every joyful moment spent together as a family. Tania Mahecha is not merely loved—she is cherished deeply and profoundly.
+      Their adventures weren't confined to Earth. They built rockets powered by imagination, charting courses to exoplanets, places beyond the reach of telescopes. Pipe became the fearless explorer, Diego the thoughtful pilot. Their rockets soared, fueled by the love of exploration, blazing past meteors and cosmic dust, carrying them to worlds of endless oceans, inhabited by wise and ancient marine creatures.
     </p>
     <p class="about-content">
-      In their family story, Tania is the guiding star, whose presence makes each day brighter, each challenge easier, and each victory sweeter. Diego and Juan Felipe consider themselves profoundly fortunate to have her in their lives, a loving partner and devoted mother whose impact will echo in their hearts forever.
+      Back on Earth, their quest continued, crafting drones and Arduino circuits in their homemade lab, their sanctuary of circuits and LEDs. Pipe discovered creatures in hidden subterranean chambers, real and imaginary, each encounter igniting conversations about biodiversity and technology.
+    </p>
+    <p class="about-content">
+      At twilight, father and son often sat quietly together, watching the horizon blend colors only visible to those patient enough to see. Diego would quote Einstein softly, reminding Pipe that reality was merely an illusion, albeit a persistent one, challenging him to question everything he perceived.
+    </p>
+    <p class="about-content">
+      One evening, beneath an aurora shimmering like a silk curtain, Diego turned to Pipe, "Our story is endless, son, written with every step, every star we chase. Remember, exploration is the purest form of freedom."
+    </p>
+    <p class="about-content">
+      Pipe nodded, eyes bright with understanding and dreams yet untold. Together, they knew no boundaries, for the universe itself was their canvas, and their story, a timeless poem painted in adventures yet to come.
     </p>
   </section>
 
@@ -95,7 +104,7 @@
   <section class="about-section">
     <h2 class="about-title">CREATORS</h2>
     <p class="about-content">
-      Badpikaverse is created and maintained by Juan Felipe Malpica and Diego Malpica, a father-son team dedicated to advancing technology and human potential. Their work is inspired by the love and support of Tania Mahecha, who serves as their constant source of inspiration and strength.
+      Badpikaverse is created and maintained by Juan Felipe Malpica and Diego Malpica, a father-son team dedicated to advancing technology and human potential through their shared passion for exploration and innovation.
     </p>
   </section>
 </main>
